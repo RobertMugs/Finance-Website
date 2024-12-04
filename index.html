@@ -9,86 +9,89 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background-color: #f8f9fa;
+            color: #333;
         }
         header {
             background-color: #004aad;
             color: white;
-            padding: 20px 10%;
+            padding: 20px;
             text-align: center;
-            background-image: url('https://via.placeholder.com/1500x500');
-            background-size: cover;
-            background-position: center;
         }
         header h1 {
             margin: 0;
-            font-size: 3rem;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            font-size: 2.5rem;
         }
         header p {
-            font-size: 1.5rem;
-            margin-top: 10px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            font-size: 1.2rem;
+            margin-top: 5px;
         }
         nav {
-            text-align: center;
-            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            background-color: #004aad;
+            padding: 10px 0;
         }
         nav a {
-            margin: 0 15px;
+            color: white;
             text-decoration: none;
-            color: #004aad;
+            margin: 0 15px;
             font-weight: bold;
-            font-size: 1.2rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
         }
         section {
             padding: 20px 10%;
+            margin: 20px auto;
+            max-width: 800px;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
         section h2 {
             color: #004aad;
-            font-size: 2rem;
-            margin-bottom: 10px;
+            font-size: 1.8rem;
         }
-        .benefits-list {
-            list-style: none;
+        section p {
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+        ul {
             padding: 0;
+            list-style: none;
         }
-        .benefits-list li {
-            margin: 15px 0;
-            background: #e6eefc;
-            padding: 15px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-        }
-        .benefits-list li img {
-            max-width: 60px;
-            margin-right: 15px;
+        ul li {
+            margin: 10px 0;
+            background-color: #e8f1fc;
+            padding: 10px;
+            border-radius: 5px;
         }
         .poll {
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #e6eefc;
+            padding: 15px;
+            border: 1px solid #004aad;
             border-radius: 8px;
+            margin-top: 20px;
         }
         .poll button {
             background-color: #004aad;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 10px 15px;
+            margin: 10px 5px;
             font-size: 1rem;
             cursor: pointer;
             border-radius: 5px;
-            margin: 5px 0;
+        }
+        .poll button:hover {
+            background-color: #003b82;
         }
         footer {
             background-color: #004aad;
             color: white;
             text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            padding: 15px 0;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -104,10 +107,29 @@
     </nav>
     <section id="about">
         <h2>What is Finance?</h2>
-        <p>Finance is the foundation of global economies. It is the study of managing money, investments, and risk to create sustainable growth. By majoring in finance, you gain tools to make better decisions for yourself and the world around you.</p>
-        <img src="https://via.placeholder.com/800x400" alt="Finance Illustration" style="width:100%; border-radius:10px; margin-top:20px;">
+        <p>Finance is the study of managing money, investments, and resources. It powers industries, governments, and individuals to achieve goals and maintain stability in a world that thrives on economic balance.</p>
+        <p>Majoring in finance opens the door to limitless opportunities. Whether you're solving global challenges or building personal wealth, finance provides tools to make impactful decisions.</p>
     </section>
     <section id="benefits">
         <h2>Benefits of Majoring in Finance</h2>
-        <ul class="benefits-list">
-            <li
+        <ul>
+            <li><strong>High Demand:</strong> Finance graduates are sought after across industries.</li>
+            <li><strong>Career Flexibility:</strong> Work in banking, investment, tech, or start your own business.</li>
+            <li><strong>Personal Growth:</strong> Learn to manage your finances and make smarter decisions.</li>
+            <li><strong>Global Impact:</strong> Address complex financial challenges affecting the world.</li>
+            <li><strong>Financial Independence:</strong> Build knowledge to achieve financial stability and wealth.</li>
+        </ul>
+    </section>
+    <section id="poll">
+        <h2>Your Feedback</h2>
+        <p>Did this website inspire or help you consider a career in finance?</p>
+        <div class="poll">
+            <button onclick="alert('Thank you for your feedback!')">Yes</button>
+            <button onclick="alert('We appreciate your honesty!')">No</button>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Your Future, Financed. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
