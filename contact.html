@@ -9,41 +9,51 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background-color: #f8f9fa;
+            color: #333;
         }
-        header, footer {
+        header {
             background-color: #004aad;
             color: white;
-            padding: 20px 10%;
+            padding: 20px;
             text-align: center;
         }
         nav {
             background-color: #003b82;
-            color: white;
-            padding: 10px 0;
             text-align: center;
+            padding: 10px 0;
         }
         nav a {
             color: white;
             text-decoration: none;
             margin: 0 15px;
+            font-size: 1.1rem;
             font-weight: bold;
         }
         nav a:hover {
             text-decoration: underline;
         }
         section {
-            padding: 20px 10%;
+            padding: 30px 10%;
+        }
+        section h2 {
+            color: #004aad;
+            margin-bottom: 20px;
         }
         form {
-            max-width: 600px;
-            margin: 0 auto;
             background: white;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto 30px;
         }
-        form input, form textarea {
+        form label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+        form input, form textarea, form button {
             width: 100%;
             margin-bottom: 15px;
             padding: 10px;
@@ -53,15 +63,50 @@
         form button {
             background-color: #004aad;
             color: white;
-            padding: 10px 15px;
             border: none;
-            border-radius: 5px;
             cursor: pointer;
         }
         form button:hover {
             background-color: #003b82;
         }
+        .poll {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .poll button {
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #004aad;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .poll button:hover {
+            background-color: #003b82;
+        }
+        .results {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #004aad;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
+        }
     </style>
+    <script>
+        let helpfulVotes = 0;
+        let notHelpfulVotes = 0;
+
+        function vote(option) {
+            if (option === "helpful") helpfulVotes++;
+            if (option === "notHelpful") notHelpfulVotes++;
+            document.getElementById("results").innerText = `Helpful: ${helpfulVotes}, Not Helpful: ${notHelpfulVotes}`;
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -76,15 +121,24 @@
     </nav>
     <section>
         <h2>We'd Love to Hear From You</h2>
-        <form action="#" method="POST">
+        <form action="#">
             <label for="name">Your Name:</label>
             <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            
             <label for="email">Your Email:</label>
             <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
             <label for="message">Your Message:</label>
             <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+            
             <button type="submit">Send Message</button>
         </form>
+        <div class="poll">
+            <h3>Was this website helpful?</h3>
+            <button onclick="vote('helpful')">Yes</button>
+            <button onclick="vote('notHelpful')">No</button>
+            <div id="results" class="results">Helpful: 0, Not Helpful: 0</div>
+        </div>
     </section>
     <footer>
         <p>&copy; 2024 Finance For Your Future. All Rights Reserved.</p>
