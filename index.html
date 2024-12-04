@@ -16,14 +16,19 @@
             color: white;
             padding: 20px 10%;
             text-align: center;
+            background-image: url('https://via.placeholder.com/1500x500');
+            background-size: cover;
+            background-position: center;
         }
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 3rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
         header p {
-            font-size: 1.2rem;
-            margin-top: 5px;
+            font-size: 1.5rem;
+            margin-top: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
         nav {
             text-align: center;
@@ -34,6 +39,7 @@
             text-decoration: none;
             color: #004aad;
             font-weight: bold;
+            font-size: 1.2rem;
         }
         section {
             padding: 20px 10%;
@@ -41,16 +47,39 @@
         section h2 {
             color: #004aad;
             font-size: 2rem;
+            margin-bottom: 10px;
         }
         .benefits-list {
             list-style: none;
             padding: 0;
         }
         .benefits-list li {
-            margin: 10px 0;
+            margin: 15px 0;
             background: #e6eefc;
-            padding: 10px;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .benefits-list li img {
+            max-width: 60px;
+            margin-right: 15px;
+        }
+        .poll {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #e6eefc;
+            border-radius: 8px;
+        }
+        .poll button {
+            background-color: #004aad;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
             border-radius: 5px;
+            margin: 5px 0;
         }
         footer {
             background-color: #004aad;
@@ -71,30 +100,14 @@
     <nav>
         <a href="#about">About Finance</a>
         <a href="#benefits">Benefits</a>
-        <a href="#start">Start Your Journey</a>
+        <a href="#poll">Your Feedback</a>
     </nav>
     <section id="about">
         <h2>What is Finance?</h2>
-        <p>Finance is the study of managing money, investments, and financial systems to create stability and growth.
-           It empowers individuals and organizations to make smart decisions, solve problems, and build a better future.</p>
+        <p>Finance is the foundation of global economies. It is the study of managing money, investments, and risk to create sustainable growth. By majoring in finance, you gain tools to make better decisions for yourself and the world around you.</p>
+        <img src="https://via.placeholder.com/800x400" alt="Finance Illustration" style="width:100%; border-radius:10px; margin-top:20px;">
     </section>
     <section id="benefits">
         <h2>Benefits of Majoring in Finance</h2>
         <ul class="benefits-list">
-            <li><strong>Career Opportunities:</strong> Finance graduates are in high demand across industries, from banking to tech.</li>
-            <li><strong>Financial Stability:</strong> Gain the knowledge to manage your own finances and build wealth.</li>
-            <li><strong>Problem-Solving Skills:</strong> Learn to analyze data, create strategies, and make impactful decisions.</li>
-            <li><strong>Global Impact:</strong> Work on solving complex financial challenges that affect the world.</li>
-            <li><strong>Personal Growth:</strong> Develop confidence, analytical skills, and a sense of purpose.</li>
-        </ul>
-    </section>
-    <section id="start">
-        <h2>Start Your Journey</h2>
-        <p>Embark on a path that combines purpose, stability, and success. Majoring in finance is more than a career choice—it's a step toward a fulfilling life.</p>
-        <button onclick="alert('Your journey starts now!')">Get Started</button>
-    </section>
-    <footer>
-        <p>&copy; 2024 Your Future, Financed. All Rights Reserved.</p>
-    </footer>
-</body>
-</html>
+            <li
